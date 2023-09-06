@@ -1,12 +1,9 @@
 def ohms_law(v=0, i=0, r=0):
     if v == 0:
-        result = i * r
-        return result
+        return i * r
     elif i == 0:
-        result = v / r
-        return result
+        return v / r
     elif r == 0:
-        result = v / i
-        return result
+        return v / i
     else:
         return 0

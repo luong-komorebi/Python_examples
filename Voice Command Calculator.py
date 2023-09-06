@@ -1,6 +1,6 @@
 import operator
 import speech_recognition as s_r
-print("Your speech_recognition version is: "+s_r.__version__)
+print(f"Your speech_recognition version is: {s_r.__version__}")
 r = s_r.Recognizer()
 my_mic_device = s_r.Microphone(device_index=1)
 with my_mic_device as source:

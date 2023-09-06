@@ -7,7 +7,7 @@ def input_list():
     # taking length and then values of list as input from user
     n = int(input("Enter number of elements in the list: "))  # taking value from user
     for i in range(n):
-        temp = int(input("Enter element " + str(i + 1) + ": "))
+        temp = int(input(f"Enter element {str(i + 1)}: "))
         list.append(temp)
 
 

@@ -29,7 +29,7 @@ driver.get(url)
 #Passes the city and state input to the weather sites search box
 
 searchBox = driver.find_element(By.XPATH, '//*[@id="wuSearch"]')
-location = city + " " + state
+location = f"{city} {state}"
 
 action = ActionChains(driver)
 searchBox.send_keys(location)
@@ -46,7 +46,7 @@ precipitationElem = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.XPATH, '//*[@id="inner-content"]/div[3]/div[1]/div/div[3]/div/lib-city-today-forecast/div/div[1]/div/div/div/a[1]'))
 )
 precipitationElem = driver.find_element(By.XPATH, '//*[@id="inner-content"]/div[3]/div[1]/div/div[3]/div/lib-city-today-forecast/div/div[1]/div/div/div/a[1]')
-precip = "Precipitation:" + precipitationElem.text.split()[0]
+precip = f"Precipitation:{precipitationElem.text.split()[0]}"
 
 windAndSkyElem = driver.find_element(By.XPATH, '//*[@id="inner-content"]/div[3]/div[1]/div/div[3]/div/lib-city-today-forecast/div/div[1]/div/div/div/a[2]')
 description = windAndSkyElem.text.split(". ")

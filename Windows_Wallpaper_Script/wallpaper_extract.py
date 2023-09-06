@@ -76,7 +76,7 @@ class Wallpaper:
                     im = Image.open(w.file_urls["wall_dst"] + filename)
                 except IOError:
                     print("This isn't a picture.", filename)
-                if list(im.size)[0] != 1920 and list(im.size)[0] != 1080:
+                if list(im.size)[0] not in [1920, 1080]:
                     im.close()
                     os.remove(w.file_urls["wall_dst"] + filename)
                 else:

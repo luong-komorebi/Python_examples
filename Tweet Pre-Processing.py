@@ -103,15 +103,7 @@ print(stoper)
 print(punct)
 
 
-# In[24]:
-
-
-cleaned = []
-for i in tokens:
-    if i not in stoper and i not in punct:
-        cleaned.append(i)
-
-
+cleaned = [i for i in tokens if i not in stoper and i not in punct]
 print(cleaned)
 
 

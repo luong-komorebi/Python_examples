@@ -17,8 +17,7 @@ def num(a):
 
         # values changing acc. to outer loop
 
-        for k in range(0, i + 1):
-
+        for _ in range(0, i + 1):
             # printing number
 
             print(num, end=" ")

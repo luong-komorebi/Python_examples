@@ -4,7 +4,7 @@ def show_score():
     if len(attempts_list) <= 0:
         print("There is currently no high score, it's yours for the taking!")
     else:
-        print("The current high score is {} attempts".format(min(attempts_list)))
+        print(f"The current high score is {min(attempts_list)} attempts")
 def start_game():
     random_number = int(random.randint(1, 10))
     print("Hello traveler! Welcome to the game of guesses!")

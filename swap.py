@@ -8,5 +8,5 @@ y = 10
 # Swap the values of x and y without the use of any temporary value
 x, y = y, x
 
-print("The value of x after swapping: {}".format(x))
-print("The value of y after swapping: {}".format(y))
+print(f"The value of x after swapping: {x}")
+print(f"The value of y after swapping: {y}")

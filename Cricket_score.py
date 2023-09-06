@@ -14,14 +14,18 @@ url = "http://www.cricbuzz.com/cricket-match/live-scores"
 sauce = request.urlopen(url).read()
 soup = bs4.BeautifulSoup(sauce, "lxml")
 
-score = []
-results = []
-
-for div_tags in soup.find_all("div", attrs={"class": "cb-lv-scrs-col text-black"}):
-    score.append(div_tags.text)
-for result in soup.find_all("div", attrs={"class": "cb-lv-scrs-col cb-text-complete"}):
-    results.append(result.text)
-
+score = [
+    div_tags.text
+    for div_tags in soup.find_all(
+        "div", attrs={"class": "cb-lv-scrs-col text-black"}
+    )
+]
+results = [
+    result.text
+    for result in soup.find_all(
+        "div", attrs={"class": "cb-lv-scrs-col cb-text-complete"}
+    )
+]
 engine = pyttsx3.init()
 
 # testing

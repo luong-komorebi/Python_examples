@@ -24,7 +24,7 @@ def ps():
 
     try:
         # perform a ps command and assign results to a list
-        output = commands.getoutput("ps -f|grep " + program)
+        output = commands.getoutput(f"ps -f|grep {program}")
         proginfo = string.split(output)
 
         # display results
@@ -52,7 +52,7 @@ def ps():
 def main():
     if os.name == "posix":  # Unix/Linux/MacOS/BSD/etc
         ps()  # Call the function
-    elif os.name in ("nt", "dos", "ce"):  # if the OS is windows
+    elif os.name in {"nt", "dos", "ce"}:  # if the OS is windows
         print("You need to be on Linux or Unix to run this")
 
 

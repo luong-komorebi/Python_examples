@@ -7,12 +7,9 @@ def is_armstrong_number(number):
         digit = temp % 10
         total += digit ** 3
         temp //= 10
-    
+
     # return the result
-    if number == total:
-        return True
-    else:
-        return False
+    return number == total
 
 number = int(input("Enter the number: "))
 if is_armstrong_number(number):

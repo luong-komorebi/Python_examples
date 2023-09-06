@@ -2,7 +2,7 @@ list = []
 
 N = int(input("Enter The Size Of List"))
 
-for i in range(0, N):
+for _ in range(0, N):
     a = int(input("Enter The number"))
     list.append(a)
 

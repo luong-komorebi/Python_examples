@@ -11,10 +11,9 @@ def cubeRoot():
             break
     if ans ** 3 != abs(x):
         print(x, "is not a perfect cube!")
-    else:
-        if x < 0:
-            ans = -ans
-    print("Cube root of " + str(x) + " is " + str(ans))
+    elif x < 0:
+        ans = -ans
+    print(f"Cube root of {x} is {str(ans)}")
 
 
 cubeRoot()
