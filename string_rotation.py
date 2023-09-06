@@ -6,10 +6,10 @@
 
 def rotate(n):
     a = list(n)
-    if len(a) == 0:
+    if not a:
         return print([])
     l = []
-    for i in range(1, len(a) + 1):
+    for _ in range(1, len(a) + 1):
         a = [a[(i + 1) % (len(a))] for i in range(0, len(a))]
         l += ["".join(a)]
     print(l)

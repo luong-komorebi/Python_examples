@@ -1,2 +1,1 @@
-fruits = ['apple', 'kiwi', 'mango']
-fruits.append("kiwi")
+fruits = ['apple', 'kiwi', 'mango', "kiwi"]

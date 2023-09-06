@@ -41,9 +41,7 @@ args_parser.add_argument(
 )
 args = args_parser.parse_args()
 
-if args.days < 0:
-    args.days = 0
-
+args.days = max(args.days, 0)
 src = args.src  # Set the source directory
 dst = args.dst  # Set the destination directory
 days = args.days  # Set the number of days

@@ -13,16 +13,16 @@ import webbrowser
 def google_search():
     """[Goes to google and searches the website asked by the user]
     """
-    google_search_link = "https://www.google.co.in/search?q="
     google_search = "What do you want me to search on Google? "
     print(google_search)
     speak(google_search)
-    
+
     query = hear()
 
     if query != "None":
+        google_search_link = "https://www.google.co.in/search?q="
         webbrowser.open(google_search_link+query)
-    elif query == "None":
+    else:
         print("I could'nt understand what you just said!")
         speak("I could'nt understand what you just said!")
 

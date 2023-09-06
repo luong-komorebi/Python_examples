@@ -1,37 +1,29 @@
 #Remove all the lines that contain the character `a' in a file and write it to another file.
-f=open("test1.txt","r") #opening file test1.txt
-lines = f.readlines() #saved lines
-print("Original file is :")
-print(lines)
-f.close()
- 
-# Rewriting lines 
+with open("test1.txt","r") as f:
+ lines = f.readlines() #saved lines
+ print("Original file is :")
+ print(lines)
+with open("test3.txt","w") as e:
+ f=open("test1.txt","w") # file containing lines without 'a'
+ for line in lines:
+  if 'a' in line or 'A' in line:
+   e.write(line)
+  else:        
+   f.write(line)
 
-e=open("test3.txt","w") # file containing lines with 'a'
-f=open("test1.txt","w") # file containing lines without 'a'
-for line in lines:
- if 'a' in line or 'A' in line:
-  e.write(line)
- else:        
-  f.write(line)
-    
-e.close()
 f.close()   
 
-f=open("test1.txt","r")   
-lines=f.readlines()
+with open("test1.txt","r") as f:
+ lines=f.readlines()
 
-e=open("test3.txt","r")   
-lines1=e.readlines()
+ with open("test3.txt","r") as e:
+  lines1=e.readlines()
 
-print("\n")
+  print("\n")
 
-print("Files without letter a:")
-print(lines)
-print("\n")
+  print("Files without letter a:")
+  print(lines)
+  print("\n")
 
-print("Files with letter a:")
-print(lines1)
-
-e.close()
-f.close()
+  print("Files with letter a:")
+  print(lines1)

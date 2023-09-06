@@ -12,7 +12,7 @@ window.geometry("600x500")
 gameList =["Game List:"]
 # Change the label text
 def show():
-    game = selected1.get() + " vs " + selected2.get()+" on "+cal.get_date()
+    game = f"{selected1.get()} vs {selected2.get()} on {cal.get_date()}"
     gameList.append(game)
     #print(gameList)
     gameListshow = "\n".join(gameList)

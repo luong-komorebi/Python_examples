@@ -22,7 +22,7 @@ from time import strftime  # Load just the strftime Module from Time
 def clear_screen():  # Function to clear the screen
     if os.name == "posix":  # Unix/Linux/MacOS/BSD/etc
         os.system("clear")  # Clear the Screen
-    elif os.name in ("nt", "dos", "ce"):  # DOS/Windows
+    elif os.name in {"nt", "dos", "ce"}:  # DOS/Windows
         os.system("CLS")  # Clear the Screen
 
 
@@ -43,7 +43,7 @@ def putty_sessions(conffilename):  # Function to load the putty sessions I need
     # Open the file server_list.txt, loop through reading each line
     #  1.1 -Changed - 1.3 Changed name to use variable conffilename
     for server in open(conffilename):
-        subprocess.Popen(("putty -load " + server))  # Open the PuTTY sessions - 1.1
+        subprocess.Popen(f"putty -load {server}")
 
 
 def rdp_sessions():

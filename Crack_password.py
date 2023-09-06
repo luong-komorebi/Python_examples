@@ -4,7 +4,7 @@ password = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j','k', 'l', 'm', 'n',
 guess = ""
 while (guess != user_pass):
     guess = ""
-    for letter in range(len(user_pass)):
+    for _ in range(len(user_pass)):
         guess_letter = password[randint(0, 25)]
         guess = str(guess_letter) + str(guess)
     print(guess)
